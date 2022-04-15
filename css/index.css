@@ -55,31 +55,35 @@ a {
 }
 
 .logo_container {
-  height: 230px;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+  place-items: center;
 }
 
 .logo_container .logo {
-  height: 100%;
+  height: 240px;
 }
 
 @media screen and (max-width: 1024px) {
-  .logo_container {
+  .logo_container .logo {
     height: 160px;
+    transform: translateY(-20px);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .logo_container {
+  .logo_container .logo {
     height: 130px;
+    transform: translateY(-20px);
   }
 }
 
 @media screen and (max-width: 376px) {
-  .logo_container {
+  .logo_container .logo {
     height: 130px;
+    transform: translateY(-20px);
   }
 }
 
@@ -166,13 +170,26 @@ a {
   .social_link_container {
     flex-direction: column;
     justify-content: space-evenly;
+    transform: translateY(10px);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .social_link_container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateY(0px);
   }
 }
 
 .copyRight {
   margin-top: auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.copyRight .w {
+  text-align: end;
 }
 
 .copyRight p {
@@ -220,6 +237,14 @@ a {
 @media screen and (min-width: 1024px) {
   .copyRight .legal {
     transform: translateX(30px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .copyRight {
+    grid-template-columns: 1fr;
+    place-items: center;
+    row-gap: 10px;
   }
 }
 
