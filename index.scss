@@ -21,8 +21,6 @@ a{
 
 
 .container{
-   padding-right: 200px;
-   padding-left: 200px;
    padding-top: 50px;
    padding-bottom: 20px;
    height: 100%;
@@ -56,7 +54,7 @@ a{
 
 
 .logo_container{
- 
+   transform: translateY(10%);
    width: 100%;
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -64,7 +62,7 @@ a{
    place-items: center;
    .logo{
      height: 240px;
-
+     transform: translateX(20px); 
      @media screen  and (max-width:1024px) {
       height: 160px;
       transform: translateY(-20px);
@@ -81,7 +79,9 @@ a{
     } 
 
    }
-   
+   @media screen  and (max-width:1024px) {
+    transform: translateY(-10%);
+  }
  
   
 }
@@ -92,6 +92,8 @@ a{
    justify-content: space-between;
    flex-grow: 1;
    align-items: center;
+   padding-left: 15%;
+   padding-right: 15%;
   .social_link{
     color: white;
     transform: translateY(-20px);
@@ -176,6 +178,8 @@ a{
   margin-top: auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  width: 100%;
+
   
   .w{
     text-align: end;
@@ -209,7 +213,7 @@ a{
   }
 
   .legal{
-
+    text-align: center;
     @media screen  and (min-width:1024px) {
        transform: translateX(30px);  
     }
